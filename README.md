@@ -38,6 +38,9 @@ zmqContext.connect("tcp://127.0.0.1:5555");
 // send
 zmqContext.send("hello world.");
 
+// recv
+var message = zmqContext.recv();
+
 // close socket
 zmqContext.close();
 

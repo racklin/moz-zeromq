@@ -315,11 +315,9 @@ NS_IMETHODIMP nsZMQ::Send(const nsACString & msg, int32_t flags, int32_t *_retva
     zmq_msg_t zmsg;
     int rc = 0;
 
-    rc = zmq_msg_init_size (&zmsg, msg.Length() + 1);
+    rc = zmq_msg_init_size (&zmsg, msg.Length());
 
     memcpy(zmq_msg_data(&zmsg), msg.BeginReading(), msg.Length());
-
-    printf("zmq_zend flags = %d \n", flags);
 
     rc = zmq_send (this->socket, &zmsg, flags);
 

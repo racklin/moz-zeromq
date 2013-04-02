@@ -20,3 +20,8 @@ add_library(moz0mq SHARED nsZMQImpl.cpp ZMQModules.cpp)
 target_link_libraries(moz0mq ${XUL_LIBRARIES})
 target_link_libraries(moz0mq ${ZMQ_LIBRARIES})
 
+add_executable(test_rep test_rep.c)
+target_link_libraries(test_rep ${ZMQ_LIBRARIES})
+
+add_executable(test_req test_req.c)
+target_link_libraries(test_req ${ZMQ_LIBRARIES})
