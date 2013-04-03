@@ -1,4 +1,4 @@
-#define __STDC_LIMIT_MACROS
+#include "mozilla-config.h"
 #include "nsZMQImpl.h"
 
 #include "mozilla/ModuleUtils.h"
