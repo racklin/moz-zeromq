@@ -1,15 +1,24 @@
 Experimental Mozilla XPCOM bindings for 0MQ
 ----------------------------------------
-This is Mozilla XPCOM bindings for [0MQ](http://www.zeromq.org) (2.2.x or higher recommended).
+This is Mozilla XPCOM bindings for [0MQ](http://www.zeromq.org) (2.2.x recommended).
 
 
-Build
+Build for Linux
 ----------------------------------------
+Debian or Ubuntu 
 Required Packages cmake / xulrunner-dev / libzmq
 
 1. cmake .
 2. make
 
+Build for MacOSX or specified XULRunner SDK
+----------------------------------------
+brew install cmake pkg-config .
+
+1. build zeromq 2.2.x.
+2. download and untar xulrunner-sdk.
+3. cmake -D XULRUNNER-SDK=/usr/local/xulrunner-sdk .
+4. make
 
 Install
 ----------------------------------------
