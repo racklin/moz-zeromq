@@ -40,3 +40,9 @@ target_link_libraries(test_rep ${ZMQ_LIBRARIES})
 
 add_executable(test_req test_req.c)
 target_link_libraries(test_req ${ZMQ_LIBRARIES})
+
+add_executable(test_pub test_pub.c)
+target_link_libraries(test_pub ${ZMQ_LIBRARIES})
+
+add_executable(test_sub test_sub.c)
+target_link_libraries(test_sub ${ZMQ_LIBRARIES})
